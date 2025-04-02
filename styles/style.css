@@ -11,6 +11,386 @@
 */
 
 .page {
-  min-inline-size: 320px;
   min-block-size: 100dvb;
+  width: var(--page-inline-size);
+  font-family: var(--font-family-main);
+  font-variation-settings: 'wght' 400;
+  background-image: var(--background-image);
+  margin: 0 auto;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  margin: 100px 0 100px 0;
+  font-family: 'Press Start 2P';
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__logo {
+  padding-block: var(--header-padding-block);
+  padding-inline: var(--header-padding-inline);
+  background-color: #fff;
+}
+
+.header__logo-size {
+  font-size: var(--font-size-title);
+  padding-bottom: 20px;
+}
+
+.header__logo-size-s {
+  font-size: var(--font-size-title-s);
+  text-transform: uppercase;
+}
+
+.content {
+  margin-top: 100px;
+}
+
+.content__card {
+  margin-bottom: 50px;
+  border: var(--primary-border);
+  background-color: #fff;
+  position: relative;
+  line-height: 21px;
+  inline-size: var(--content-inline-size);
+}
+
+.label {
+  position: absolute;
+  right: 20px;
+  top: 50px;
+  font-family: 'Press Start 2P';
+  font-weight: 400;
+  font-size: var(--font-size-decoration);
+  mix-blend-mode: hard-light;
+  text-transform: uppercase;
+  opacity: 50%;
+  text-shadow: 1px 1px 0 #fff,
+               1px -1px 0 #fff,
+               -1px 1px 0 #fff,
+              -1px -1px 0 #fff;
+}
+
+@supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
+
+  .label {
+    -webkit-text-stroke: 1px #fff;
+    text-stroke: 1px #fff;
+    text-shadow: none;
+  }
+  }
+
+.contnetn__title {
+  font-family: 'Inter-Variable';
+  font-variation-settings: 'wght' 700;
+  font-size: var(--font-size-main);
+  padding: 10px 24px 5px 10px ;
+}
+
+.content__container {
+  padding: 25px 25px 25px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+
+.content__card-img {
+ max-width: 100%;
+ align-self: center;
+ border-top: var(--primary-border);
+ border-bottom: var(--primary-border);
+}
+
+.filter__brightness {
+  filter: brightness(30%);
+}
+
+.filter__grayscale {
+  filter: grayscale(30%);
+}
+
+.filter__blur {
+  filter: blur(3px);
+}
+
+.filter__invert {
+  filter: invert(27%);
+}
+
+.filter__opacity {
+  filter: opacity(40%);
+}
+
+.filter__saturate {
+  filter: saturate(270%);
+}
+
+.filter__sepia {
+  filter: sepia(0.6);
+}
+
+.filter {
+  filter: hue-rotate(0.5turn);
+  filter: opacity(10%);
+}
+
+.content__subtitle {
+  font-size: var(--font-size-main);
+  inline-size: var(--content-subtitle-inline-size);
+}
+
+.content__button__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: 25px;
+  padding-bottom: 16px;
+  gap: 12px;
+}
+
+.card__like-button {
+  width: 130px;
+  background-color: transparent;
+  border: var(--primary-border);
+  transition: box-shadow 0.3s ease;
+  transition: background-color 0.5s ease-in-out;
+}
+
+/*общин стили для кнопок*/
+.button-decorated {
+  position: relative;
+}
+
+.button-decorated:focus {
+  outline: none;
+}
+
+.button-decorated:focus-visible{
+  box-shadow: 2px 2px 0  var(--accent-color); /*проверить цвет*/
+}
+
+.button-decorated::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  transform: scaleX(0); /*сжимает элемент*/
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+}
+
+.button-decorated:hover::after {
+  transform: scaleX(1); /*разжимает при наведении+ применяется афтер*/
+}
+
+.button-decorated:hover {
+  background-color: var(--accent-color);
+}
+
+.button__text {
+  mix-blend-mode: difference;
+  color: var(--accent-blend-color);
+  font-family: 'Press Start 2P';
+  font-weight: 400;
+  font-size: var(--font-size-decoration);
+  position: relative;
+  z-index: 1;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 103px;
+}
+
+.footer__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 18px 20px 18px 20px;
+  font-family: 'Press Start 2P';
+  font-weight: 400;
+  font-size: var(--font-size-decoration);
+  background-color: #fff;
+  border: var(--primary-border);
+  transition: background-color 0.5s ease-in-out;
+}
+
+dialog[open] {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 353px;
+  height: 191px;
+  text-align: center;
+  grid-template-columns: min-content 1fr;
+}
+
+.dialog__title {
+  text-transform: uppercase;
+  font-family: 'Press Start 2P';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+  width: 234px;
+  height: 63px;
+}
+
+dialog::backdrop {
+  backdrop-filter: brightness(75%);
+}
+
+.dialog__button {
+  inline-size: 100%;
+  grid-column: span 2;
+  width: 293px;
+  height: 38px;
+  border: var(--primary-border);
+  background-color: transparent;
+}
+
+.dialog__button-decor {
+  font-family: 'Press Start 2P';
+  font-weight: 400;
+  font-size: var(--font-size-decoration);
+}
+
+/*svg*/
+.floppy__dialog {
+  grid-row: 1;
+  width: 39px;
+  height: 39px;
+}
+
+.floppy {
+  position: relative;
+  z-index: 1;
+  fill: var(--accent-blend-color);
+  mix-blend-mode: difference;
+  width: 21px;
+  height: 21px;
+}
+
+/*heart*/
+
+.card__icon-button {
+  width: 39px;
+  height: 36px;
+  background-color: transparent;
+  padding: 0;
+  border: none !important;
+}
+
+.core {
+  fill: #fff;
+ transition: fill 0.3s linear;
+}
+
+.main-body {
+  fill: #fff;
+  transition: fill 0.3s linear;
+}
+
+.sparks {
+  opacity: 0;
+  }
+
+.contour {
+  transition: fill 0.1s;
+}
+
+.card__icon-button:focus {
+  border: none;
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: var(--primary-border);
+}
+
+.card__icon-button:hover .core  {
+  fill: #000;
+  transition: fill 0.3s linear;
+}
+
+.card__icon-button:hover .main-body  {
+  fill: #000;
+  transition: fill 0.5s linear;
+}
+
+.card__icon-button:active .core  {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s linear;
+}
+
+.card__icon-button:active .main-body  {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon {
+
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--animation-fill-color);
+  transition: fill 0.6s linear;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .heart {
+  animation: scaling-heart 0.3s ease-in;
+  transform-origin: center;
+}
+
+.like-icon.is-liked .sparks {
+  animation: show-sparks 0.3s ease-in 0.3s;
+}
+
+@keyframes scaling-heart {
+
+  from {
+    transform: scale(1);
+    transform-origin: center;
+  }
+
+  to {
+    transform: scale(1.25);
+    transform-origin: center;
+  }
+}
+
+@keyframes show-sparks {
+  to {
+    opacity: 0;
+  }
+
+  from {
+    opacity: 1;
+  }
+}
+
+@media (width <= 375px) {
+
+
 }

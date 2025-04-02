@@ -1,1 +1,35 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+--font-family-main: 'Inter-Variable';
+--font-size-title: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+--font-size-title-s: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+--font-size-main: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+--font-size-decoration: clamp(0.875rem, 0.875rem + 0vw, 0.875rem); /*button + label*/
+
+--accent-color: #000;
+--accent-blend-color: #fff;
+--primary-border: 2px solid var(--accent-color);
+
+--background-image:
+repeating-linear-gradient(to right,
+    #d3d3d3 0px 2px,
+    transparent 2px 4px),
+    repeating-linear-gradient(to top,
+    #d3d3d3 0px 2px,
+    transparent 2px 4px),
+    linear-gradient(to bottom,
+    #e7e7e7,
+    #1a1a1a );
+
+--page-inline-size: clamp(23.4375rem, -1.6406rem + 80.25vw, 43.5rem);
+--header-padding-block: clamp(7.5rem, 6.875rem + 2vw, 8rem);
+--header-padding-inline: clamp(0.875rem, -7.4844rem + 26.75vw, 7.5625rem);
+--content-inline-size: clamp(23.4375rem, -1.6406rem + 80.25vw, 43.5rem); /*ширина карточки*/
+--content-subtitle-inline-size: clamp(20.0625rem, -5.3281rem + 81.25vw, 40.375rem); /*ширина абзацев в карточке*/
+--main-button-inline-size: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem); /*самая большая кнопка*/
+
+--contour-hear: #000;
+--animation-fill-color:#ff0000; /*body*/
+--fill-core: #fff; /*core*/
+}
