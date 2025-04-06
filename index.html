@@ -23,7 +23,7 @@
       <section class="content__list">
         <!--1-->
       <article class="content__card">
-        <h2 class="contnetn__title">Фритрек и нулевой спринт: Подготовка к работе</h2>
+        <h2 class="content__title">Фритрек и нулевой спринт: Подготовка к работе</h2>
         <img
         class="content__card-img filter__saturate"
          src="./images/images1.jpg"
@@ -54,7 +54,7 @@
       </article>
       <!--2-->
       <article class="content__card">
-        <h2 class="contnetn__title">1 спринт: Я — чистый лист</h2>
+        <h2 class="content__title">1 спринт: Я — чистый лист</h2>
         <img
         class="content__card-img
         filter__brightness"
@@ -86,7 +86,7 @@
       </article>
       <!--3-->
       <article class="content__card">
-        <h2 class="contnetn__title">1 спринт: А если не получится?</h2>
+        <h2 class="content__title">1 спринт: А если не получится?</h2>
         <img
         class="content__card-img filter__lighten"
          src="./images/images3.jpg"
@@ -117,7 +117,7 @@
       </article>
       <!--4-->
       <article class="content__card">
-        <h2 class="contnetn__title">2 спринт: Погоня за идеалом</h2>
+        <h2 class="content__title">2 спринт: Погоня за идеалом</h2>
         <img
         class="content__card-img filter__contrast"
          src="./images/images4.jpg"
@@ -148,7 +148,7 @@
       </article>
       <!--5-->
       <article class="content__card">
-        <h2 class="contnetn__title">2 спринт: О тех, кто рядом</h2>
+        <h2 class="content__title">2 спринт: О тех, кто рядом</h2>
         <img
         class="content__card-img filter__opacity"
          src="./images/images5.jpg"
@@ -181,7 +181,7 @@
       </article>
       <!--6-->
       <article class="content__card">
-        <h2 class="contnetn__title">3 спринт: Обходные стратегии</h2>
+        <h2 class="content__title">3 спринт: Обходные стратегии</h2>
         <img
         class="content__card-img filter__light"
          src="./images/images6.jpg"
@@ -212,7 +212,7 @@
       </article>
       <!--7-->
       <article class="content__card">
-        <h2 class="contnetn__title">3 спринт: Когда опускаются руки</h2>
+        <h2 class="content__title">3 спринт: Когда опускаются руки</h2>
         <img
         class="content__card-img filter__shadow"
          src="./images/images7.jpg"
@@ -243,7 +243,7 @@
       </article>
       <!--8-->
       <article class="content__card">
-        <h2 class="contnetn__title">«Сейчас я здесь»</h2>
+        <h2 class="content__title">«Сейчас я здесь»</h2>
         <img
         class="content__card-img filter__default"
          src="./images/images8.jpg"
@@ -291,8 +291,8 @@
        </svg>
        <span class="button__text">Сохранить на память</span>
       </button>
-      <dialog id="dialog-id">
-        <h2 class="dialog__title button__text">Вставьте
+      <dialog id="dialog-id" aria-labelledby="dialog-title" aria-describedby="dialog-description">
+        <h2 id="dialog-title" class="dialog__title button__text">Вставьте
         дискету, чтобы продолжить</h2>
         <svg
         class="floppy__dialog"
@@ -306,7 +306,8 @@
       <button
       class="dialog__button dialog__button-decor"
       type="button"
-      onclick="window['dialog-id'].close()">
+      onclick="window['dialog-id'].close()"
+      aria-label="Закрыть диалог">
       ок
   </button>
     </dialog>

@@ -73,7 +73,7 @@
   }
   }
 
-.contnetn__title {
+.content__title {
   padding-inline-start: 10px;
   font-family: 'Inter-Variable';
   font-variation-settings: 'wght' 700;
@@ -159,6 +159,7 @@
   border: var(--primary-border);
   transition: box-shadow 0.3s ease, background-color 0.5s ease-in-out;
   margin-inline-end: 25px;
+  cursor: pointer;
 }
 
 /*общин стили для кнопок*/
