@@ -157,8 +157,7 @@
   width: 130px;
   background-color: transparent;
   border: var(--primary-border);
-  transition: box-shadow 0.3s ease;
-  transition: background-color 0.5s ease-in-out;
+  transition: box-shadow 0.3s ease, background-color 0.5s ease-in-out;
   margin-inline-end: 25px;
 }
 
@@ -244,7 +243,6 @@ dialog[open] {
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
-  text-transform: uppercase;
   width: 234px;
   height: 63px;
 }
@@ -325,17 +323,17 @@ dialog::backdrop {
   transition: fill 0.3s linear;
 }
 
-.card__icon-button:hover .main-body  {
+.card__icon-button:hover .main-body {
   fill: #000;
   transition: fill 0.5s linear;
 }
 
-.card__icon-button:active .core  {
+.card__icon-button:active .core {
   fill: var(--animation-fill-color);
   transition: fill 0.3s linear;
 }
 
-.card__icon-button:active .main-body  {
+.card__icon-button:active .main-body {
   fill: var(--animation-fill-color);
   transition: fill 0.3s linear;
 }
