@@ -390,8 +390,8 @@ dialog::backdrop {
   .content__save__button {
     display: grid;
     justify-items: center;
-      width: 306px;
-      height: 84px;
+      min-width: 306px;
+      min-height: 84px;
   }
 
   .floppy {
