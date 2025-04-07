@@ -2,6 +2,7 @@
 
 :root {
 --font-family-main: 'Inter-Variable';
+--font-family-accent: 'Press Start 2P';
 --font-size-title: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 --font-size-title-s: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
 --font-size-main: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
@@ -23,7 +24,7 @@ repeating-linear-gradient(to right,
     #1a1a1a );
 
 --page-inline-size: clamp(23.4375rem, -1.6406rem + 80.25vw, 43.5rem);
---header-padding-block: clamp(7.5rem, 6.875rem + 2vw, 8rem);
+--header-padding-block: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
 --header-padding-inline: clamp(0.875rem, -7.4844rem + 26.75vw, 7.5625rem);
 --content-inline-size: clamp(23.4375rem, -1.6406rem + 80.25vw, 43.5rem); /*ширина карточки*/
 --content-subtitle-inline-size: clamp(20.0625rem, -5.3281rem + 81.25vw, 40.375rem); /*ширина абзацев в карточке*/
