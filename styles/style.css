@@ -56,8 +56,8 @@
 .label {
   position: absolute;
   z-index: 1;
-  right: 10px;
-  top: 45px;
+  right: 23px;
+  top: 23px;
   font-family: var(--font-family-accent), fantasy;
   font-weight: 400;
   font-size: var(--font-size-decoration);
@@ -245,24 +245,26 @@
   border: var(--primary-border);
   transition: background-color 0.5s ease-in-out;
 }
+/**/
+dialog {
+  padding: 30px clamp(30px, -0.94vw + 43.52px, 40px);
+  max-inline-size: clamp(341px, 335.4px + 1.5vw, 357px);
+}
 
 dialog[open] {
-  display: grid;
-  justify-content: center;
+  background-color: #fff;
+}
+
+.dialog__container {
+  display: flex;
   align-items: center;
-  width: 353px;
-  text-align: center;
-  grid-template-columns: min-content 1fr;
-  padding: 27px;
-  row-gap: 30px;
-  column-gap: clamp(1.25rem, 1.4261rem + -0.7512vw, 0.75rem);
+  flex-direction: row-reverse;
+  gap: 20px;
 }
 
 .dialog__title {
   text-transform: uppercase;
   font-family: var(--font-family-accent), fantasy;
-  font-weight: 400;
-  font-size: 14px;
   line-height: 150%;
   width: 234px;
   text-align: start;
@@ -273,26 +275,28 @@ dialog::backdrop {
 }
 
 .dialog__button__form {
+  display: flex;
+  justify-content: center;
   inline-size: 100%;
-  grid-column: span 2;
-  width: 293px;
+  margin-top: 30px;
   height: 38px;
-}
-
-.content__save__button-dialog {
-  width: clamp(16.0625rem, 15.2702rem + 3.3803vw, 18.3125rem);
-  height: 38px;
-  gap: 10px;
   background-color: #fff;
   transition: background-color 0.5s ease-in-out;
   text-transform: uppercase;
+  border: 2px solid #000000;
 }
 
-/*svg*/
+.content__save__button-dialog {
+ background-color: transparent;
+ border: 0;
+ text-transform: uppercase;
+}
+
 .floppy__dialog {
-  grid-row: 1;
   width: 39px;
   height: 39px;
+  align-self: center;
+  flex-shrink: 0;
 }
 
 .floppy {
@@ -339,6 +343,8 @@ dialog::backdrop {
   .content__save__button {
     display: grid;
     justify-items: center;
+    align-items: start;
+    align-content: center;
     max-width: 306px;
     min-height: 84px;
   }
@@ -347,4 +353,10 @@ dialog::backdrop {
     width: 28px;
     height: 28px;
   }
+
+  .label {
+    right: 10px;
+    top: 20px;
+  }
+
 }
