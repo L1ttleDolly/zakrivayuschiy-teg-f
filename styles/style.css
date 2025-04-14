@@ -210,7 +210,7 @@
   transform: scaleX(1); /*разжимает при наведении+ применяется афтер*/
 }
 
-.button-decorated:hover {
+.button-decorated:{
   background-color: var(--accent-color);
 }
 
