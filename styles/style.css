@@ -321,6 +321,7 @@ dialog::backdrop {
   background-color: transparent;
   padding: 0;
   border: 2px solid transparent;
+  cursor: pointer;
 }
 
 .core {
