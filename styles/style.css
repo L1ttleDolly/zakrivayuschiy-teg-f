@@ -244,6 +244,7 @@
   background-color: #fff;
   border: var(--primary-border);
   transition: background-color 0.5s ease-in-out;
+  cursor: pointer;
 }
 /**/
 dialog {
@@ -290,6 +291,7 @@ dialog::backdrop {
  background-color: transparent;
  border: 0;
  text-transform: uppercase;
+ cursor: pointer;
 }
 
 .floppy__dialog {
